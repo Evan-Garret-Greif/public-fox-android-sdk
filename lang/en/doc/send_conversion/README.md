@@ -2,6 +2,8 @@
 
 By implementing install tracking , it is able to start the effectiveness measurements of advertisement. When using cookie tracking, the external browser is activated. In this case, you can specify the URL string as the argument of `sendConversion` as the transition destination of the external browser.
 
+<code> "external browser"とは？ "transition destination"とは? </code>
+
 Please implement in a order following.
 
 > NOTE:
@@ -33,6 +35,7 @@ You can pass the User ID as the second argument of the `sendConversion`. For exa
 ad.sendConversion("default", "your unique id");
 ```
 > sendConversionWithStartPage cannot pass Login ID as arguments because of implementing this as function launch directory.
+<code> "sendConversionWithStartPage"は何でLoginIDを投げれない？ </code>
 
 ### Receive installation measurement completion callback
 

@@ -87,7 +87,7 @@ The AndroidManifest.xml should include the following permissions:
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-`READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE` permission are optional.
+`READ_EXTERNAL_STORAGE` and `WRITE_EXTERNAL_STORAGE` permission are optional. <code> なんで任意ですか？</code>
 
 ```xml
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -103,7 +103,7 @@ ACCESS_NETWORK_STATE|Normal|Mandatory|It is necessary so that F.O.X SDK confirm 
 READ_EXTERNAL_STORAGE ※1|Dangerous|Optional|It is necessary to improve deduplication using storage.(※)
 WRITE_EXTERNAL_STORAGE ※1|Dangerous|Optional|It is necessary to improve deduplication using storage.(※)
 
-> ※ To use the function which is necessary to use the permission specified that ProtectionLevel is dangerous by Android M, it is necessary to get the permission from users. For more detail, check [Setting of deduplication using external storage](./doc/external_storage/README.md).
+> ※ To use the function which is necessary to use the permission specified that ProtectionLevel is dangerous by Android M<code> AndroidMは何？</code>, it is necessary to get the permission from users. For more detail, check [Setting of deduplication using external storage](./doc/external_storage/README.md).
 
 ### Set the metadata
 
@@ -111,16 +111,16 @@ Add following <meta-data>tags to manifest file, within <application>tag.
 
 ```xml
 <meta-data
-	android:name="APPADFORCE_APP_ID"
+	android:name="APPADFORCE_APP_ID" <code> これはＣＹＺ側で管理するための番号？ </code>
 	android:value="There will be a contact from the administrator of Force Operation X, so please type the value." />
 <meta-data
 	android:name="APPADFORCE_SERVER_URL"
 	android:value="There will be a contact from the administrator of Force Operation X, so please type the value." />
 <meta-data
-	android:name="APPADFORCE_CRYPTO_SALT"
+	android:name="APPADFORCE_CRYPTO_SALT" <code> ソルトってなんだっけ？ </code>
 	android:value="There will be a contact from the administrator of Force Operation X, so please type the value." />
 <meta-data
-	android:name="ANALYTICS_APP_KEY"
+	android:name="ANALYTICS_APP_KEY" <code> これは何のための変数？ </code>
 	android:value="There will be a contact from the administrator of Force Operation X, so please type the value." />
 ```
 
@@ -134,7 +134,7 @@ Key and value for setting are following.
 |ANALYTICS_APP_KEY|Mandatory|There will be a contact from the administrator of Force Operation X, so please type the value.|
 
 
-### Set the Install Referrer Broadcast Receiver
+### Set the Install Referrer Broadcast Receiver <code> このソースで何が行われている？ </code>
 Add the following receiver to manifest file, within <application>tag.
 
 ```xml
@@ -147,7 +147,7 @@ Add the following receiver to manifest file, within <application>tag.
 
 In the case that receiver class to "com.android.vending.INSTALL_REFERRER" is already defined, please refer to [Setting in the case of making multiple INSTALL_REFERRER receivers coexist](./doc/install_referrer/README.md)
 
-### Set the URL Scheme
+### Set the URL Scheme <code> なぜSchemeを設定する？ </code>
 
 Activities that are meant to be opened should have the below intent filter on the activity definitions in the manifest file.
 
@@ -179,6 +179,8 @@ Please refer to [The implementation of Google Play Services SDK to use advertise
 By implementing install tracking , it is able to start the effectiveness measurements of advertisement. Please implement in a order following.
 
 Add `sendConversion` to onCreate() of Activity that is called upon when launching the application.
+
+<code> 一回だけ処理されるんですか＞？ </code>
 
 ```java
 import jp.appAdForce.android.AdManager;

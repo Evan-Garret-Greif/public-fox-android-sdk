@@ -2,7 +2,7 @@
 
 Force Operation X Android SDK is compliant to Google Play developer program policy. To be compliant to policy, in this SDK, advertisement ID is not acquired in the case of acquiring everlasting device ID（IMEI、MAC address and AndroidID）. From August, 1st, 2014, for all update uploaded into Google Play store and new application, it is necessary to advertisement ID for terminal ID using as advertising objectives. For being compliant to this policy, please follow the procedures below.
 
-<mark> 上記部分わからない。Mcaddress等が使えないってこと？ </mark>
+<span style="background-color: #FFFF00"> 上記部分がわからない。Macaddressが使えないってこと？ </span>
 
 ## Google Play Services SDK
 
